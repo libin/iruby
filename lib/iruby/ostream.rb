@@ -42,5 +42,9 @@ module IRuby
     def writelines(lines)
       lines.each { |s| write(s) }
     end
+
+    def printf(s, *args)
+      write sprintf(s, *args)
+    end
   end
 end
